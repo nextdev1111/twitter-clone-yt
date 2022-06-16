@@ -8,6 +8,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.6",
     "@supabase/supabase-js": "^1.35.3",
+    "@uiball/loaders": "^1.2.6",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",

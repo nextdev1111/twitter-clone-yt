@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   CalendarIcon,
   EmojiHappyIcon,
@@ -7,6 +7,8 @@ import {
   MicrophoneIcon,
   PhotographIcon,
 } from "@heroicons/react/outline";
+import toast from "react-hot-toast";
+import supabase from "../utils/supabase";
 
 function PostBox() {
   return (
@@ -35,8 +37,8 @@ function PostBox() {
           {/* Icons */}
           <div className="flex items-center flex-col md:flex-row">
             <div className="my-2 md:my-0 w-full justify-between md:justify-start flex space-x-2 flex-1 text-twitter">
-              <div className="menuDiv">
-                <PhotographIcon className="menuButton" />
+              <div className={`menuDiv `}>
+                <PhotographIcon className={`menuButton`} />
               </div>
               <div className="menuDiv">
                 <MicrophoneIcon className="menuButton" />
