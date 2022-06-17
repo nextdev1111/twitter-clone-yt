@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import supabase from "../utils/supabase";
 import { AuthChangeEvent, Session } from "@supabase/supabase-js";
 import LoadingPage from "../components/LoadingPage";
+import { RecoilRoot } from "recoil";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [authenticated, setAuthenticated] = useState<String>();
@@ -61,10 +62,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (loading) return <LoadingPage />;
 
   return (
-    <>
+    <RecoilRoot>
       <Toaster />
       <Component {...pageProps} />
-    </>
+    </RecoilRoot>
   );
 }
 
